@@ -22,7 +22,7 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Publish project
-      run: dotnet publish RconCli -c Release -o publish -r win-x64 -p:Version=${{ steps.get_version.outputs.VERSION }} -p:PublishSingleFile=true -p:PublishReadyToRun=true --no-self-contained
+      run: dotnet publish RconCli -c Release -o publish -r win-x64 -p:Version=${{ steps.get_version.outputs.VERSION }} -p:PublishSingleFile=true -p:PublishReadyToRun=true --self-contained
     - name: Create archive
       run: zip -j RconCli-${{ steps.get_version.outputs.VERSION }}.zip publish/RconCli.exe LICENSE THIRDPARTYLEGALNOTICES
     - name: Create release
