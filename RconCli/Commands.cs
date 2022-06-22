@@ -26,6 +26,7 @@ public class Commands
         {
             rconClient.Connect(IP, Port, Password);
             reply = rconClient.Send(Command);
+            rconClient.Close();
         }
         catch (Exception exception)
         {
