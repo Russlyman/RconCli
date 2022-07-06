@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
-    <PackageReference Include="Russlyman.Rcon" Version="1.0.4" />
+    <PackageReference Include="Russlyman.Rcon" Version="2.0.1" />
   </ItemGroup>
 
 </Project>

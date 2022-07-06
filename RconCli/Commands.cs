@@ -19,14 +19,13 @@ public class Commands
 
     public void SendRconCommand()
     {
-        var rconClient = new RconClient();
+        using var rconClient = new RconClient();
         string reply;
 
         try
         {
             rconClient.Connect(IP, Port, Password);
             reply = rconClient.Send(Command);
-            rconClient.Close();
         }
         catch (Exception exception)
         {
